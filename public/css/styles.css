@@ -1,0 +1,57 @@
+html {
+    scroll-behavior: smooth;
+}
+.is-180x180{
+    height: 180px;
+    width: 180px;
+}
+.skill-list > li{
+    margin: 30px 0 0 0;
+}
+.has-bg-image {
+    background-color: rgba(0, 0, 0, 0.811);
+}
+.bulma-image {
+    width: 200px;
+}
+.interests {
+    display: flex;
+    justify-content: center;
+}
+.summary-text {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 36em;
+}
+.article {
+    height: 100%;
+}
+.skill-card {
+    height: auto;
+}
+.skill-title {
+    font-weight: bold;
+    
+}
+.skill-subtitle {
+    font-weight: bold;
+    padding-top: 10px;
+    margin : 0 0px 10px 0px !important;
+}
+.skill-icon {
+    padding: 20px;
+
+}
+
+.title a {
+    text-decoration: none;
+    color: inherit;
+}
+.education-img {
+    width: 30% !important;
+    margin: auto;
+}
+
+.language-level {
+    width: 40%;
+}
