@@ -16,6 +16,7 @@ function buildBadges(certificates) {
           imageName={cert.x_imageName}
           badgeId={cert.x_badgeId}
           badgeName={cert.name + " by " + cert.issuer}
+          link={cert.url}
         />
       </div>
     );

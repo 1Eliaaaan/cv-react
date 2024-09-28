@@ -28,8 +28,8 @@
       "position": "Backend Developer",
       "website": "https://one.master.la",
       "startDate": "2022-07-14",
-      "endDate": "",
-      "summary": "Part of the SRE Delivery team, I'm helping PagerDuty deliver the best experience to their customers.",
+      "endDate": "2024-09-24",
+      "summary": "I was part of the development team at Master, where I contributed to various projects. In these projects, I applied my skills in both backend and frontend development, working across different aspects of the development lifecycle to deliver solutions.",
       "highlights": []
     }
 
@@ -52,7 +52,7 @@
   "skills": [
     {
       "name": "AWS",
-      "x_icon": "fa-brands fa-aws",
+      "x_icon": "fas fa-cloud",
       "x_description": "EC2, VPC, Cognito, CloudFormation, RDS, S3, CloudFront, IAM and others",
       "x_subcategories" : {
         "Compute" : ["EC2", "Lambda", "ECS"], 
@@ -67,7 +67,7 @@
     },
     {
       "name": "Databases",
-      "x_icon": "fa-brands fa-aws",
+      "x_icon": "fas fa-database",
       "x_subcategories" : {
         "MongoDB" : [], 
         "MySQL" : [], 
@@ -75,8 +75,8 @@
       }
     },
     {
-      "name": "Languages & Frameworks",
-      "x_icon": "fa-brands fa-aws",
+      "name": "Languages",
+      "x_icon": "fas fa-code",
       "x_subcategories" : {
         "Javascript" : [], 
         "TypeScript" : [], 
@@ -86,7 +86,7 @@
     },
     {
       "name": "CI/CD",
-      "x_icon": "fa-brands fa-aws",
+      "x_icon": "fas fa-infinity",
       "x_subcategories" : {
         "Git" : [], 
         "AWS CI/CD" : [], 
@@ -99,7 +99,7 @@
   "languages": [
     {
       "language": "English",
-      "fluency": "60"
+      "fluency": "40"
     },
     {
       "language": "Spanish",
@@ -113,7 +113,23 @@
       "url": "",
       "x_badgeId": "263d35c5-83db-4f93-97a4-a84ee806da90",
       "x_imageId": "0e284c3f-5164-4b21-8660-0d84737941bc",
-      "x_imageName": "sena.jpg"
+      "x_imageName": "sena.png"
+    },
+    {
+      "name": "View Legacy JavaScript Algorithms and Data Structures Certification",
+      "issuer": "FreeCodeCamp",
+      "url": "https://www.freecodecamp.org/certification/ElianD/javascript-algorithms-and-data-structures",
+      "x_badgeId": "263d35c5-83db-4f93-97a4-a84ee806da90",
+      "x_imageId": "0e284c3f-5164-4b21-8660-0d84737941bc",
+      "x_imageName": "freecodecamp.png"
+    },
+    {
+      "name": "Backend Development and APIs",
+      "issuer": "FreeCodeCamp",
+      "url": "https://www.freecodecamp.org/certification/ElianD/back-end-development-and-apis",
+      "x_badgeId": "263d35c5-83db-4f93-97a4-a84ee806da90",
+      "x_imageId": "0e284c3f-5164-4b21-8660-0d84737941bc",
+      "x_imageName": "freecodecamp.png"
     }
   ],
   "interests": [
