@@ -29,7 +29,7 @@ function Hero() {
           <div className="column"></div>
           {Resume.basics.profiles.map((value, index) => {
             return (
-              <div key={index} className="column has-text-centered">
+              <div key={index} className="has-text-centered" style={{marginLeft : "10px"}}>
                 <a
                   href={value.url}
                   target="blank"

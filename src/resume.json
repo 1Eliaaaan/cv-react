@@ -12,14 +12,24 @@
       "region": "Medellin"
     },
     "profiles": [
-
       {
         "network": "LinkedIn",
         "username": "elian-hernandez-323828299",
         "url": "https://www.linkedin.com/in/elian-hernandez-323828299/",
         "x_icon": "fab fa-2x fa-linkedin"
+      },
+           {
+        "network": "E-mail",
+        "username": "elianhernandezc16@gmail.com",
+        "url": "mailto:elianhernandezc16@gmail.com",
+        "x_icon": "fa-sharp fa-solid fa-envelope fa-2xl"
+      },
+      {
+        "network": "Github",
+        "username": "1Eliaaan",
+        "url": "https://github.com/1Eliaaaan",
+        "x_icon": "fa-brands fa-github fa-2xl"
       }
-
     ]
   },
   "work": [
