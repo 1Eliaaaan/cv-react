@@ -16,19 +16,23 @@ class NavBar extends React.Component {
 
   render() {
     return (
-      <nav className="navbar is-transparent">
+      <nav
+        className="navbar is-transparent"
+ 
+      >
         <div className="container">
-          <div className="navbar-brand">
-            <a href="/" className="navbar-item title is-unselectable my-name">
-              {Resume.basics.name}
-            </a>
+          <div className="navbar-brand"  style={{ margin : "auto"  }}>
+          <a href="https://d19o0ng1o3cl3u.cloudfront.net/cv-resources/CV.pdf" className="button is-link " target="_blank" rel="noopener noreferrer"  style={{ margin : "auto"  }}>
+  Download CV
+</a>
+          {/* <button class="button is-link">Download CV</button> */}
             <span
               className="navbar-burger burger"
               onClick={this.handleMenuClick}
             >
-              <span></span>
-              <span></span>
-              <span></span>
+              <span className="has-background-white"></span>
+              <span className="has-background-white"></span>
+              <span className="has-background-white"></span>
             </span>
           </div>
           <div
@@ -42,7 +46,6 @@ class NavBar extends React.Component {
               <MenuItem text="Skills" href="#skills" />
               <MenuItem text="Education" href="#Education" />
               <MenuItem text="Experience" href="#experience" />
-
             </div>
           </div>
         </div>

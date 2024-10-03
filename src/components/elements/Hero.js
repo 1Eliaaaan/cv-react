@@ -5,7 +5,14 @@ import Resume from "../../resume.json";
 function Hero() {
   return (
     <section className="hero is-dark is-fullheight has-bg-image">
-      <div className="hero-head">
+      <div className="hero-head"     style={{
+          position: "fixed",
+          top: 0,
+          zIndex: 1000,
+          width: "100%", 
+          backgroundColor : "#4a4a4a",
+          boxShadow: "0 2px 4px rgba(0, 0, 0, 0.1)"
+        }}>
         <NavBar />
       </div>
       <div className="hero-body">
