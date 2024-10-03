@@ -22,9 +22,9 @@ function buildSkillsRow(skills, start, end) {
 
 function Skills() {
   return (
-    <section className="section" id="skills">
+    <section className="section has-background-dark" id="skills">
       <div className="container">
-        <h1 className="title">Skills</h1>
+        <h1 className="title has-text-white">Skills</h1>
         <div className="columns">
           {buildSkillsRow(Resume.skills, 0, 4)}
         </div>

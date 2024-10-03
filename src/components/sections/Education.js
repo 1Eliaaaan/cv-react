@@ -26,9 +26,9 @@ function buildBadges(certificates) {
 
 function Education() {
   return (
-    <section className="section" id="Education">
+    <section className="section has-background-dark" id="Education">
       <div className="container">
-        <h1 className="title">Education</h1>
+        <h1 className="title has-text-white">Education</h1>
         <div className="columns is-centered">
           {buildBadges(Resume.certificates)}
         </div>

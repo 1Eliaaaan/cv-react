@@ -9,7 +9,7 @@ function Skill(props) {
 
   return (
     <div
-      className={`card skill-card is-clickable ${isHovered ? 'is-hovered' : ''}`}
+      className={`card skill-card is-clickable ${isHovered ? 'is-hovered' : ''} has-background-dark`}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
       style={{ transition: 'transform 0.3s ease', cursor: 'pointer' }}
@@ -24,7 +24,7 @@ function Skill(props) {
           <div className="media-content"
           style={{ marginTop : '1rem' }}>
             <p
-              className="skill-title is-size-6"
+              className="skill-title is-size-6 has-text-white"
               style={{
                 position: 'relative',
                 display: 'inline-block',
@@ -54,11 +54,11 @@ function Skill(props) {
                     transition: 'max-height 0.5s ease, opacity 0.5s ease',
                   }}
                 >
-                  <p className="skill-subtitle subtitle has-text-black is-size-6">
+                  <p className="skill-subtitle subtitle  has-text-white is-size-6 ">
                     {subcategory}
                   </p>
                   {check(subcategory).map((item) => (
-                    <p key={item} style={{ marginLeft: '20px' }}>
+                    <p key={item} style={{ marginLeft: '20px' }} className='has-text-grey-light'>
                       - {item}
                     </p>
                   ))}

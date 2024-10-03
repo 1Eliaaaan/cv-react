@@ -3,7 +3,7 @@ import Resume from "../../resume.json";
 
 function Languages() {
   return (
-    <section className="section" id="Education">
+    <section className="section has-background-dark" id="Education">
       <div className="container">
         <h1 className="title mt-4">Languages</h1>
         <div className="columns is-centered">
