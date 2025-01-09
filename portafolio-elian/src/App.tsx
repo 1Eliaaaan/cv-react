@@ -1,16 +1,27 @@
-import "./App.css";
-import Content from "./components/structure/Content";
-import Footer from "./components/structure/Footer";
-import Header from "./components/structure/Header";
+import { motion } from 'framer-motion'
+import Navbar from './components/Navbar'
+import Hero from './components/Hero'
+import Projects from './components/Projects'
+import Education from './components/Education'
+import Experience from './components/Experience'
+import About from './components/About'
 
 function App() {
   return (
-    <>
-      <Header />
-      <Content />
-      <Footer />
-    </>
-  );
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 0.5 }}
+    >
+      <Navbar />
+      <Hero />
+      <Projects />
+      <Education />
+      <Experience />
+      <About />
+    </motion.div>
+  )
 }
 
-export default App;
+export default App
+
