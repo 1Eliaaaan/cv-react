@@ -1,24 +1,121 @@
-@import 'tailwindcss/base';
-@import 'tailwindcss/components';
-@import 'tailwindcss/utilities';
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 :root {
-  --foreground-rgb: 255, 255, 255;
-  --background-start-rgb: 0, 0, 0;
-  --background-end-rgb: 0, 0, 0;
-}
-
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  --primary-color: #4ade80;
+  --primary-dark: #22c55e;
 }
 
 html {
   scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-gray-900 text-white;
+  font-family: 'Inter', sans-serif;
+}
+
+/* Transiciones suaves para el modo oscuro */
+* {
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+/* Estilos para el scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-gray-800;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-gray-600 rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-gray-500;
+}
+
+/* Animaciones de entrada */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.5s ease-out forwards;
+}
+
+/* Estilos para imágenes */
+img {
+  @apply select-none;
+}
+
+/* Estilos para enlaces */
+a {
+  @apply transition-colors duration-300;
+}
+
+/* Estilos para botones */
+button {
+  @apply transition-all duration-300;
+}
+
+/* Estilos para inputs y textareas */
+input, textarea {
+  @apply bg-gray-800 border border-gray-700 rounded-lg px-4 py-2 text-white focus:outline-none focus:border-green-500;
+}
+
+/* Estilos para cards */
+.card {
+  @apply bg-gray-800 rounded-lg shadow-lg overflow-hidden transition-transform duration-300 hover:transform hover:scale-105;
+}
+
+/* Estilos para badges */
+.badge {
+  @apply inline-block bg-gray-700 text-gray-300 rounded-full px-3 py-1 text-sm font-semibold;
+}
+
+/* Estilos para títulos */
+h1, h2, h3, h4, h5, h6 {
+  @apply font-bold;
+}
+
+/* Estilos para párrafos */
+p {
+  @apply text-gray-300;
+}
+
+/* Estilos para secciones */
+section {
+  @apply py-20;
+}
+
+/* Estilos para contenedores */
+.container {
+  @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+}
+
+/* Estilos para centrado */
+.centered-container {
+  @apply flex items-center justify-center;
+}
+
+/* Estilos para grid */
+.grid-container {
+  @apply grid gap-8;
+}
+
+/* Estilos para flex */
+.flex-container {
+  @apply flex flex-wrap items-center justify-center gap-4;
 }
 

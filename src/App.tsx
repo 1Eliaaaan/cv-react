@@ -1,25 +1,28 @@
-import { motion } from 'framer-motion'
-import Navbar from './components/Navbar'
+import { useEffect } from 'react'
 import Hero from './components/Hero'
-import Projects from './components/Projects'
-import Education from './components/Education'
-import Experience from './components/Experience'
 import About from './components/About'
+import Experience from './components/Experience'
+import Education from './components/Education'
+import Projects from './components/Projects'
+import ScrollToTop from './components/ScrollToTop'
+import Navbar from './components/Navbar'
+import './App.css'
 
 function App() {
   return (
-    <motion.div
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      transition={{ duration: 0.5 }}
-    >
+    <div className="w-full min-h-screen bg-gray-900 text-white">
       <Navbar />
-      <Hero />
-      <Projects />
-      <Education />
-      <Experience />
-      <About />
-    </motion.div>
+      <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <ScrollToTop />
+        <main className="space-y-20">
+          <Hero />
+          <About />
+          <Experience />
+          <Education />
+          <Projects />
+        </main>
+      </div>
+    </div>
   )
 }
 
