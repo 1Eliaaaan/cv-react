@@ -32,17 +32,17 @@ const projects: Project[] = [
     githubLink: "https://github.com/1Eliaaaan/fitsum-app",
     liveLink: "https://fitsum-app.vercel.app",
     image: "https://api.microlink.io/?url=https://fitsum-app.vercel.app&screenshot=true&meta=false&embed=screenshot.url",
-    role: "Backend Developer",
+    role: "Full Stack Developer",
 
   },
   {
-    title: "Heroes of Cipher Website",
-    description: "Heroes of cipher is a website that contains some functions like store and blog this was built on wordpress and deployed on AWS Lightsail.",
-    technologies: ["Wordpress", "AWS Lightsail"],
-    liveLink: "http://44.212.224.30/",
+    title: "Clothing Ecommerce",
+    description: "Eccomerce website for a clothing brand. Using Gutember editor for page building. WooCommerce for the store. Deployed on railway.app. ",
+      technologies: ["Wordpress", "Railway", "WooCommerce", "PHP", "MySQL", "Elementor", "CSS"],
+    liveLink: "https://primary-production-11d2d.up.railway.app/",
     githubLink: '',
-    image: "https://api.microlink.io/?url=http://44.212.224.30/&screenshot=true&meta=false&embed=screenshot.url",
-    role: "DevOps Engineer",
+    image: "https://api.microlink.io/?url=https://primary-production-11d2d.up.railway.app/&screenshot=true&meta=false&embed=screenshot.url",
+    role: "Developer",
 
   },  {
     title: "Fit Tracker",
