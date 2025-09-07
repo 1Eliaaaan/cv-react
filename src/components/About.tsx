@@ -19,11 +19,11 @@ const About = () => {
                   className="float-left mr-4 mb-4 rounded-lg w-1/3 md:w-1/2 lg:w-1/3 shadow-md hover:shadow-lg transition-shadow duration-300"
                 />
                 <p className="text-gray-300 leading-relaxed">
-                  I am a passionate Backend Developer with two years of experience in web development, specializing in building scalable and efficient solutions. My expertise spans across both Frontend and Backend development, with a strong focus on cloud architecture and database management. I excel in designing and implementing RESTful APIs, microservices architectures, and cloud-based solutions using AWS.
+                 I’m a backend developer with two years of experience in web development, focused on building scalable and efficient solutions. While my main strength is backend, I also have frontend experience, which gives me a more complete view of projects. I’m passionate about working with cloud architectures and database management, as well as designing and implementing RESTful APIs, microservices, and AWS-based solutions.
 
-                  What sets me apart is my ability to bridge the gap between technical implementation and business objectives. I am constantly seeking innovative solutions and process optimizations to enhance product efficiency and quality. My experience in database management and scalable service architecture allows me to tackle complex challenges with creative and effective solutions.
+What sets me apart is my ability to connect technical implementation with business goals, always looking for ways to optimize processes and improve product quality. Thanks to my background in databases and scalable architectures, I enjoy tackling complex challenges and coming up with creative, practical solutions.
 
-                  I am particularly interested in emerging technologies like Web3 and Blockchain, and I am always eager to learn and adapt to new technologies and methodologies. My goal is to continue growing as a developer while contributing to meaningful projects that make a real impact.
+I’m also very interested in exploring emerging technologies like Web3 and Blockchain, and I’m always eager to learn and adapt to new tools and methodologies. My goal is to keep growing as a developer while contributing to projects that create a real impact.
                 </p>
               </div>
             </div>
