@@ -3,33 +3,32 @@ import AnimatedSection from './AnimatedSection'
 
 const About = () => {
   return (
-    <section id="about" className="py-20 bg-gray-900">
+    <section id="about" className="py-20 bg-primary-dark shadow-sm shadow-gray-700 rounded-lg">
       <div className="container mx-auto px-4">
         <AnimatedSection>
           <h2 className="text-4xl font-bold mb-10 text-center text-white">About Me</h2>
         </AnimatedSection>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           <AnimatedSection>
-            <div className="bg-gray-800 rounded-lg p-6 shadow-lg hover:shadow-xl transition-shadow duration-300">
+            <div className="rounded-lg p-6 shadow-lg hover:shadow-xl hover:shadow-gray-700 transition-shadow duration-300">
               <h3 className="text-2xl font-semibold mb-6 text-white">About Me</h3>
               <div className="relative">
                 <img 
                   src="https://d19o0ng1o3cl3u.cloudfront.net/cv-resources/profile.jpg" 
                   alt="Your professional photo" 
-                  className="float-left mr-4 mb-4 rounded-lg w-1/3 md:w-1/2 lg:w-1/3 shadow-md hover:shadow-lg transition-shadow duration-300"
+                  className="float-left mr-4 mb-4 rounded-lg w-1/4 md:w-1/2 lg:w-1/4 shadow-md hover:shadow-lg transition-shadow duration-300"
                 />
                 <p className="text-gray-300 leading-relaxed">
-                 I’m a backend developer with two years of experience in web development, focused on building scalable and efficient solutions. While my main strength is backend, I also have frontend experience, which gives me a more complete view of projects. I’m passionate about working with cloud architectures and database management, as well as designing and implementing RESTful APIs, microservices, and AWS-based solutions.
-
-What sets me apart is my ability to connect technical implementation with business goals, always looking for ways to optimize processes and improve product quality. Thanks to my background in databases and scalable architectures, I enjoy tackling complex challenges and coming up with creative, practical solutions.
-
-I’m also very interested in exploring emerging technologies like Web3 and Blockchain, and I’m always eager to learn and adapt to new tools and methodologies. My goal is to keep growing as a developer while contributing to projects that create a real impact.
+                 I am a full-stack developer with three years of experience in web development, focused on developing scalable and efficient applications. I specialize in backend development, but I also work on frontend development, which helps me understand projects from a comprehensive perspective. I am passionate about cloud architectures, databases, and the creation and integration of reliable APIs and microservices. I tend to find practical solutions that connect technical work with business objectives, and I always find ways to improve products and make them more efficient. I am also interested in exploring new technologies such as Web3 and Blockchain, and I am constantly learning new things to continue improving as a developer.
                 </p>
               </div>
             </div>
           </AnimatedSection>
           <AnimatedSection>
-            <div className="bg-gray-800 rounded-lg p-6 shadow-lg hover:shadow-xl transition-shadow duration-300">
+            <div className="max-w-4xl mx-auto">
+
+</div>
+            <div className=" rounded-lg p-6 shadow-lg hover:shadow-xl hover:shadow-gray-700 transition-shadow duration-300">
               <h3 className="text-2xl font-semibold mb-6 text-white">Skills</h3>
               <ul className="space-y-4">
                 <li className="flex items-center group">

@@ -13,7 +13,7 @@ export default {
       colors: {
         primary: {
           light: '#4ade80',
-          dark: '#22c55e',
+          dark: '#212121',
         },
       },
     },
