@@ -1,5 +1,4 @@
 import { useState } from 'react'
-import { FaGithub, FaExternalLinkAlt } from 'react-icons/fa'
 import { motion, AnimatePresence } from 'framer-motion'
 import AnimatedSection from './AnimatedSection'
 
