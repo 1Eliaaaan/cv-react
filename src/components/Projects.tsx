@@ -72,9 +72,9 @@ const personalProjects: Project[] = [
     title: "Arcana Esscence",
     description: "Fragances Online Shop",
     technologies: ["TypeScript", "React", "Supabase", "Auth", "SQL"],
-    liveLink: "https://arcanaesscence.vercel.app/",
+    liveLink: "https://arcanaesscence.store/",
     githubLink: '',
-    image: "https://api.microlink.io/?url=https://arcanaesscence.vercel.app/&screenshot=true&meta=false&embed=screenshot.url",
+    image: "https://api.microlink.io/?url=https://arcanaesscence.store/&screenshot=true&meta=false&embed=screenshot.url",
     role: "Full Stack Developer",
   },
 ]
