@@ -27,4 +27,4 @@ Allow: /
 User-agent: Bytespider
 Allow: /
 
-Sitemap: https://elianhernandez.vercel.app/sitemap.xml
+Sitemap: https://cv-react-elians-projects-87a6cab3.vercel.app/sitemap.xml
