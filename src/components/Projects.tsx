@@ -1,13 +1,14 @@
 import { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import AnimatedSection from './AnimatedSection'
+import { FaExternalLinkAlt, FaGithub } from 'react-icons/fa'
 
 interface Project {
   title: string
   description: string
   technologies: string[]
   githubLink: string
-  liveLink?: string 
+  liveLink?: string
   image: string
   role: string
   metrics?: string
@@ -16,7 +17,7 @@ interface Project {
 const personalProjects: Project[] = [
   {
     title: "Chat App",
-    description: "A Chat application, with authentication system and functional message sending.",
+    description: "Real-time chat application with full authentication and functional messaging system.",
     technologies: ["TypeScript", "React", "Firebase", "Vercel"],
     githubLink: "https://github.com/1Eliaaaan/react-chat-app",
     liveLink: "https://chat-app-five-gilt.vercel.app",
@@ -25,25 +26,16 @@ const personalProjects: Project[] = [
   },
   {
     title: "Fitsum App",
-    description: "A fitness application helps people create their fitness routines and recipes with the help of artificial intelligence.",
-    technologies: ["Node.js", "TypeScript", "React", "MySQL", "S3", "CloudFront", "Lambdas", "OpenAI", "Vercel", "API Gateway"],
+    description: "AI-powered fitness app for creating personalized workout routines and recipes using OpenAI.",
+    technologies: ["Node.js", "TypeScript", "React", "MySQL", "S3", "CloudFront", "Lambda", "OpenAI"],
     githubLink: "https://github.com/1Eliaaaan/fitsum-app",
     liveLink: "https://fitsum-app.vercel.app",
     image: "https://api.microlink.io/?url=https://fitsum-app.vercel.app&screenshot=true&meta=false&embed=screenshot.url",
     role: "Full Stack Developer",
   },
-  // {
-  //   title: "Clothing Ecommerce",
-  //   description: "Eccomerce website for a clothing brand. Using Gutember editor for page building. WooCommerce for the store. Deployed on railway.app.",
-  //   technologies: ["Wordpress", "Railway", "WooCommerce", "PHP", "MySQL", "Elementor", "CSS"],
-  //   liveLink: "https://primary-production-11d2d.up.railway.app/",
-  //   githubLink: '',
-  //   image: "https://api.microlink.io/?url=https://primary-production-11d2d.up.railway.app/&screenshot=true&meta=false&embed=screenshot.url",
-  //   role: "Full Stack Developer",
-  // },
   {
     title: "Fit Tracker",
-    description: "Track your fitness goals and progress with this app.",
+    description: "Track your fitness goals, progress, and workout history with intuitive dashboards.",
     technologies: ["TypeScript", "React", "Node.js", "Vercel", "Supabase"],
     liveLink: "https://fit-tracker-tawny.vercel.app/",
     githubLink: '',
@@ -52,25 +44,25 @@ const personalProjects: Project[] = [
   },
   {
     title: "RugFI",
-    description: "Trade, swap, and snipe ERC-20 tokens on the blockchain — manage your portfolio from one powerful platform.",
-    technologies: ["TypeScript", "React", "Node.js", "Express", "Vercel", "MongoDB", "Web3"],
+    description: "Trade, swap, and snipe ERC-20 tokens on the blockchain from one powerful platform.",
+    technologies: ["TypeScript", "React", "Node.js", "Express", "MongoDB", "Web3"],
     liveLink: "https://rugfi-ft.vercel.app/",
     githubLink: '',
     image: "https://api.microlink.io/?url=https://rugfi-ft.vercel.app/&screenshot=true&meta=false&embed=screenshot.url",
     role: "Full Stack Developer",
   },
-    {
+  {
     title: "Koroshi Programmer",
-    description: "Auto Traing, Fight, Levelup NFTs Scheduler",
-    technologies: ["TypeScript", "React", "Lambda", "AWS", "Event Bridge", "Web3"],
+    description: "Automated NFT scheduler for training, fighting, and leveling up digital assets.",
+    technologies: ["TypeScript", "React", "Lambda", "AWS", "EventBridge", "Web3"],
     liveLink: "https://koroshi-programmer.vercel.app/",
     githubLink: '',
     image: "https://api.microlink.io/?url=https://koroshi-programmer.vercel.app/&screenshot=true&meta=false&embed=screenshot.url",
     role: "Full Stack Developer",
   },
-      {
-    title: "Arcana Esscence",
-    description: "Fragances Online Shop",
+  {
+    title: "Arcana Essence",
+    description: "Premium online fragrance shop with auth, catalog, and shopping cart.",
     technologies: ["TypeScript", "React", "Supabase", "Auth", "SQL"],
     liveLink: "https://www.arcanaessence.store/",
     githubLink: '',
@@ -78,28 +70,30 @@ const personalProjects: Project[] = [
     role: "Full Stack Developer",
   },
 ]
-const laboralProjects : Project[]= [
+
+const laboralProjects: Project[] = [
   {
     title: "MasterTools",
-    description: "A Ecommerce Tools Swite",
-    technologies: ["TypeScript", "React", "AWS Step Functions", "WebScraping", "Javascript","AWS Lambda"],
+    description: "E-commerce tools suite with scraping automation and AWS orchestration.",
+    technologies: ["TypeScript", "React", "AWS Step Functions", "WebScraping", "Lambda"],
     githubLink: "",
     liveLink: "https://mastertools.com/",
     image: "https://api.microlink.io/?url=https://mastertools.com/&screenshot=true&meta=false&embed=screenshot.url",
     role: "Full Stack Developer",
   },
-    {
+  {
     title: "MasterShop",
-    description: "A DropShipping Platform",
-    technologies: ["TypeScript", "React", "Event Bridge", "Node Js", "Javascript", "SOAP", "XML", "AWS Lambda"],
+    description: "Dropshipping platform with SOAP integrations and event-driven architecture.",
+    technologies: ["TypeScript", "React", "EventBridge", "Node.js", "SOAP", "XML", "Lambda"],
     githubLink: "",
     liveLink: "https://mastershop.com/",
     image: "https://api.microlink.io/?url=https://mastershop.com/&screenshot=true&meta=false&embed=screenshot.url",
     role: "Full Stack Developer",
-  },   {
-    title: "Chat App",
-    description: "A Whatsapp Chat App With Meta API",
-    technologies: ["TypeScript", "React", "Dynamo DB", "Node Js", "Javascript", "AWS Lambda"],
+  },
+  {
+    title: "WhatsApp Chat App",
+    description: "Internal chat application built with Meta WhatsApp Business API.",
+    technologies: ["TypeScript", "React", "DynamoDB", "Node.js", "Lambda"],
     githubLink: "",
     liveLink: "",
     image: "",
@@ -107,158 +101,117 @@ const laboralProjects : Project[]= [
   }
 ]
 
+type Tab = 'personal' | 'work'
+
 const Projects = () => {
-  const [selectedTech, setSelectedTech] = useState<string>('all')
-  const allTechnologiesPersonal = ['all', ...new Set(personalProjects.flatMap(p => p.technologies))]
-   const allTechnologiesWork = ['all', ...new Set(laboralProjects.flatMap(p => p.technologies))]
-  const filteredProjectsPersonal = selectedTech === 'all' ? personalProjects : personalProjects.filter(personalProjects => personalProjects.technologies.includes(selectedTech))
-  const filteredProjectsWork = selectedTech === 'all' ? laboralProjects : laboralProjects.filter(laboralProjects => laboralProjects.technologies.includes(selectedTech))
+  const [activeTab, setActiveTab] = useState<Tab>('personal')
+  const projects = activeTab === 'personal' ? personalProjects : laboralProjects
 
   return (
-    <section id="projects" className="py-20 shadow-sm shadow-gray-700 hover:shadow-xl hover:shadow-gray-700">
-      <div className="container mx-auto px-4">
+    <section id="projects" className="py-24 relative">
+      <div className="max-w-6xl mx-auto px-6">
         <AnimatedSection>
-          <h2 className="text-4xl font-bold mb-10 text-center text-white">Personal Projects</h2>
+          <h2 className="section-title">Projects</h2>
         </AnimatedSection>
 
-        <div className="flex flex-wrap justify-center gap-4 mb-12">
-          {allTechnologiesPersonal.map((tech) => (
-            <motion.button
-              key={tech}
-              onClick={() => setSelectedTech(tech)}
-              className={`px-4 py-2 rounded-full text-sm font-semibold transition-all duration-300 ${
-                selectedTech === tech
-                  ? 'bg-green-500 text-white'
-                  : 'bg-gray-700 text-gray-300 hover:bg-gray-600'
+        {/* Tabs */}
+        <AnimatedSection delay={0.1}>
+          <div className="flex gap-1 p-1 mb-12 bg-card rounded-lg border border-border w-fit">
+            <button
+              onClick={() => setActiveTab('personal')}
+              className={`px-5 py-2.5 rounded-md font-code text-sm transition-all duration-300 ${
+                activeTab === 'personal'
+                  ? 'bg-amber-accent text-deep font-semibold shadow-glow-amber'
+                  : 'text-txt-muted hover:text-txt-primary'
               }`}
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
             >
-              {tech.charAt(0).toUpperCase() + tech.slice(1)}
-            </motion.button>
-          ))}
-        </div>
+              Personal
+            </button>
+            <button
+              onClick={() => setActiveTab('work')}
+              className={`px-5 py-2.5 rounded-md font-code text-sm transition-all duration-300 ${
+                activeTab === 'work'
+                  ? 'bg-amber-accent text-deep font-semibold shadow-glow-amber'
+                  : 'text-txt-muted hover:text-txt-primary'
+              }`}
+            >
+              Work
+            </button>
+          </div>
+        </AnimatedSection>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {/* Project grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           <AnimatePresence mode="wait">
-            {filteredProjectsPersonal.map((personalProjects, index) => (
+            {projects.map((project, index) => (
               <motion.div
-                key={personalProjects.title}
+                key={`${activeTab}-${project.title}`}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -20 }}
-                transition={{ duration: 0.28, delay: index * 0.06 }}
+                transition={{ duration: 0.3, delay: index * 0.06 }}
               >
-                <div 
-                onClick={() => window.open(personalProjects.liveLink, '_blank')}
-                className="cursor-pointer rounded-lg shadow-lg shadow-gray-700 hover:shadow-xl hover:shadow-white overflow-hidden transform transition-all duration-300 hover:scale-[1.02]">
-                  <div className="relative h-50 overflow-hidden">
-                    <img
-                      src={personalProjects.image}
-                      alt={personalProjects.title}
-                      className="w-full h-full object-cover"
-                      onError={(e) => {
-                        e.currentTarget.src =
-                          'https://via.placeholder.com/400x300?text=Project+Preview'
-                      }}
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
-                  </div>
+                <div className="glass-card group overflow-hidden h-full flex flex-col">
+                  {/* Image */}
+                  {project.image && (
+                    <div className="relative h-44 overflow-hidden">
+                      <img
+                        src={project.image}
+                        alt={project.title}
+                        className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                        onError={(e) => {
+                          e.currentTarget.style.display = 'none'
+                        }}
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-card via-card/20 to-transparent" />
 
-                  <div className="p-2">
-                    <h3 className="text-lg font-semibold mb-1 text-white">{personalProjects.title}</h3>
-                    <p className="text-gray-300 mb-3">{personalProjects.role}</p>
-                    <p className="text-gray-300 mb-3">{personalProjects.description}</p>
-                    {personalProjects.metrics && (
-                      <p className="text-green-400 text-sm mb-3">{personalProjects.metrics}</p>
-                    )}
-
-                    <div className="mb-4 flex flex-wrap gap-2">
-                      {personalProjects.technologies.map((tech, i) => (
-                        <span
-                          key={i}
-                          className="inline-block bg-gray-600 rounded-full px-3 py-1 text-xs font-semibold text-gray-300"
-                        >
-                          {tech}
-                        </span>
-                      ))}
+                      {/* Hover overlay with links */}
+                      <div className="absolute inset-0 bg-deep/60 opacity-0 group-hover:opacity-100 transition-all duration-300 flex items-center justify-center gap-4">
+                        {project.liveLink && (
+                          <a
+                            href={project.liveLink}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="w-10 h-10 rounded-lg bg-amber-accent flex items-center justify-center text-deep transition-transform duration-200 hover:scale-110"
+                            onClick={(e) => e.stopPropagation()}
+                          >
+                            <FaExternalLinkAlt size={14} />
+                          </a>
+                        )}
+                        {project.githubLink && (
+                          <a
+                            href={project.githubLink}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="w-10 h-10 rounded-lg border border-border bg-card flex items-center justify-center text-txt-primary transition-transform duration-200 hover:scale-110"
+                            onClick={(e) => e.stopPropagation()}
+                          >
+                            <FaGithub size={16} />
+                          </a>
+                        )}
+                      </div>
                     </div>
+                  )}
 
-                  </div>
-                </div>
-              </motion.div>
-            ))}
-          </AnimatePresence>
-        </div>
-      </div>
-          <div className="container mx-auto px-4">
-        <AnimatedSection>
-          <h2 className="text-4xl font-bold mb-10 text-center text-white">Work Projects</h2>
-        </AnimatedSection>
-
-        <div className="flex flex-wrap justify-center gap-4 mb-12">
-          {allTechnologiesWork.map((tech) => (
-            <motion.button
-              key={tech}
-              onClick={() => setSelectedTech(tech)}
-              className={`px-4 py-2 rounded-full text-sm font-semibold transition-all duration-300 ${
-                selectedTech === tech
-                  ? 'bg-green-500 text-white'
-                  : 'bg-gray-700 text-gray-300 hover:bg-gray-600'
-              }`}
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-            >
-              {tech.charAt(0).toUpperCase() + tech.slice(1)}
-            </motion.button>
-          ))}
-        </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <AnimatePresence mode="wait">
-            {filteredProjectsWork.map((project, index) => (
-              <motion.div
-                key={project.title}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, y: -20 }}
-                transition={{ duration: 0.28, delay: index * 0.06 }}
-              >
-                <div 
-                onClick={() => window.open(project.liveLink, '_blank')}
-                className="cursor-pointer rounded-lg shadow-lg shadow-gray-700 hover:shadow-xl hover:shadow-white overflow-hidden transform transition-all duration-300 hover:scale-[1.02]">
-                  <div className="relative h-50 overflow-hidden">
-                    <img
-                      src={project.image}
-                      alt={project.title}
-                      className="w-full h-full object-cover"
-                      onError={(e) => {
-                        e.currentTarget.src =
-                          'https://via.placeholder.com/400x300?text=Project+Preview'
-                      }}
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
-                  </div>
-
-                  <div className="p-2">
-                    <h3 className="text-lg font-semibold mb-1 text-white">{project.title}</h3>
-                    <p className="text-gray-300 mb-3">{project.role}</p>
-                    <p className="text-gray-300 mb-3">{project.description}</p>
+                  {/* Content */}
+                  <div className="p-5 flex flex-col flex-1">
+                    <div className="flex items-center justify-between mb-2">
+                      <h3 className="font-mono text-base font-semibold text-txt-primary">{project.title}</h3>
+                    </div>
+                    <p className="font-serif text-sm text-txt-muted mb-4 flex-1 leading-relaxed">{project.description}</p>
+                    
                     {project.metrics && (
-                      <p className="text-green-400 text-sm mb-3">{project.metrics}</p>
+                      <p className="font-code text-xs text-cyan-accent mb-3">{project.metrics}</p>
                     )}
 
-                    <div className="mb-4 flex flex-wrap gap-2">
-                      {project.technologies.map((tech, i) => (
-                        <span
-                          key={i}
-                          className="inline-block bg-gray-600 rounded-full px-3 py-1 text-xs font-semibold text-gray-300"
-                        >
-                          {tech}
-                        </span>
+                    <div className="flex flex-wrap gap-2 mt-auto">
+                      {project.technologies.slice(0, 5).map((tech, i) => (
+                        <span key={i} className="tech-tag">{tech}</span>
                       ))}
+                      {project.technologies.length > 5 && (
+                        <span className="tech-tag !text-txt-muted !border-border">+{project.technologies.length - 5}</span>
+                      )}
                     </div>
-
                   </div>
                 </div>
               </motion.div>

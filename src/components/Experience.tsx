@@ -1,69 +1,78 @@
 import AnimatedSection from './AnimatedSection'
 
-interface Experience {
+interface ExperienceItem {
   position: string
   company: string
   period: string
+  type: string
   responsibilities: string[]
 }
 
-const experiences: Experience[] = [
+const experiences: ExperienceItem[] = [
   {
     position: "Backend Web Developer",
     company: "Master.la",
-    period: "2022 - 2024",
+    period: "2022 — 2024",
+    type: "Full-time",
     responsibilities: [
-      "Design and development of scalable APIs",
-      "Implementation of microservices architectures",
-      "Database query optimization and performance improvement",
-      "WebScraping",
-      "Extenal APIs Integrations",
+      "Designed and developed scalable RESTful APIs serving thousands of requests",
+      "Implemented microservices architecture for better system modularity",
+      "Optimized database queries improving response times significantly",
+      "Built web scraping solutions for automated data extraction",
+      "Integrated external APIs and third-party services",
     ]
-  }]
+  }
+]
 
 const Experience = () => {
   return (
-    <section id="experience" className="py-20 shadow-sm shadow-gray-700">
-      <div className="container mx-auto px-4">
+    <section id="experience" className="py-24 relative">
+      <div className="max-w-5xl mx-auto px-6">
         <AnimatedSection>
-          <h2 className="text-4xl font-bold mb-10 text-center">Experience</h2>
+          <h2 className="section-title">Experience</h2>
         </AnimatedSection>
-        <div className="space-y-8">
-           <ol className="relative border-s border-gray-200 dark:border-gray-700"> 
+
+        <div className="relative">
+          {/* Vertical glowing line */}
+          <div className="absolute left-[19px] top-0 bottom-0 w-px bg-gradient-to-b from-amber-accent/40 via-border to-transparent" />
+
           {experiences.map((exp, index) => (
-            <AnimatedSection key={index}>
-                         
-<li className="mb-10 ms-4 relative">
-  <div className="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -start-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"></div>
+            <AnimatedSection key={index} variant="slideLeft" delay={0.1}>
+              <div className="relative pl-12 pb-12">
+                {/* Timeline dot */}
+                <div className="absolute left-3 top-2">
+                  <div className="glow-dot" />
+                </div>
 
-  <time className="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">
-    {`${exp.period} - ${exp.company}`}
-  </time>
+                <div className="glass-card p-8">
+                  {/* Header */}
+                  <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-6">
+                    <div>
+                      <h3 className="font-mono text-xl font-bold text-txt-primary">{exp.position}</h3>
+                      <div className="flex items-center gap-3 mt-1">
+                        <span className="font-serif text-amber-accent font-medium">{exp.company}</span>
+                        <span className="text-txt-dim">·</span>
+                        <span className="font-code text-xs text-txt-muted">{exp.type}</span>
+                      </div>
+                    </div>
+                    <span className="font-code text-xs text-txt-muted bg-card px-3 py-1.5 rounded-md border border-border self-start">
+                      {exp.period}
+                    </span>
+                  </div>
 
-  <h3 className="text-lg font-semibold text-gray-700 dark:text-white">
-    {exp.position}
-  </h3>
-
-  <h2 className="mb-2 text-primary-light">Responsibilities</h2>
-
-  <ul className="flex flex-wrap gap-3 list-disc list-inside marker:text-primary-light">
-    {exp.responsibilities.map((resp, i) => (
-      <li
-        key={i}
-        className="text-base font-normal text-gray-500 dark:text-gray-400"
-      >
-        {resp}
-      </li>
-    ))}
-  </ul>
-</li>
-
-
-  
-
+                  {/* Responsibilities */}
+                  <ul className="space-y-3">
+                    {exp.responsibilities.map((resp, i) => (
+                      <li key={i} className="flex items-start gap-3 group">
+                        <span className="w-1.5 h-1.5 rounded-full bg-amber-accent/40 mt-2 flex-shrink-0 group-hover:bg-amber-accent transition-colors duration-300" />
+                        <span className="font-serif text-txt-muted group-hover:text-txt-primary transition-colors duration-300">{resp}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
             </AnimatedSection>
           ))}
-          </ol>
         </div>
       </div>
     </section>
@@ -71,4 +80,3 @@ const Experience = () => {
 }
 
 export default Experience
-

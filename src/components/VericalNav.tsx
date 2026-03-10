@@ -14,47 +14,45 @@ const SECTIONS: Section[] = [
 const VerticalNav: React.FC = () => {
   const [active, setActive] = useState<string>(SECTIONS[0].id);
 
-useEffect(() => {
-  const observers: IntersectionObserver[] = [];
+  useEffect(() => {
+    const observers: IntersectionObserver[] = [];
 
-  SECTIONS.forEach((section) => {
-    const el = document.getElementById(section.id);
-    if (!el) return;
+    SECTIONS.forEach((section) => {
+      const el = document.getElementById(section.id);
+      if (!el) return;
 
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting && entry.intersectionRatio >= 0.5) {
-            setActive(section.id);
-          }
-        });
-      },
-      { threshold: [0.5] }
-    );
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting && entry.intersectionRatio >= 0.3) {
+              setActive(section.id);
+            }
+          });
+        },
+        { threshold: [0.3] }
+      );
 
-    observer.observe(el);
-    observers.push(observer);
-  });
+      observer.observe(el);
+      observers.push(observer);
+    });
 
-  // 🔧 Al cargar, marcar la primera visible
-  const checkInitialVisible = () => {
-    for (const s of SECTIONS) {
-      const el = document.getElementById(s.id);
-      if (!el) continue;
-      const rect = el.getBoundingClientRect();
-      if (rect.top >= 0 && rect.bottom <= window.innerHeight) {
-        setActive(s.id);
-        return;
+    const checkInitialVisible = () => {
+      for (const s of SECTIONS) {
+        const el = document.getElementById(s.id);
+        if (!el) continue;
+        const rect = el.getBoundingClientRect();
+        if (rect.top >= 0 && rect.bottom <= window.innerHeight) {
+          setActive(s.id);
+          return;
+        }
       }
-    }
-    setActive(SECTIONS[0].id); // fallback al hero
-  };
+      setActive(SECTIONS[0].id);
+    };
 
-  checkInitialVisible();
+    checkInitialVisible();
 
-  return () => observers.forEach((o) => o.disconnect());
-}, []);
-
+    return () => observers.forEach((o) => o.disconnect());
+  }, []);
 
   const scrollTo = (id: string) => {
     const el = document.getElementById(id);
@@ -62,49 +60,50 @@ useEffect(() => {
     el.scrollIntoView({ behavior: "smooth", block: "center" });
   };
 
-  
-
   return (
-    <>
+    <nav className="hidden lg:flex fixed left-8 top-1/2 -translate-y-1/2 flex-col items-center gap-5 z-50">
+      {/* Vertical gradient line */}
+      <div className="absolute w-px h-full bg-gradient-to-b from-transparent via-border to-transparent" />
 
+      {SECTIONS.map((s) => {
+        const isActive = active === s.id;
+        return (
+          <div key={s.id} className="relative group z-10">
+            <motion.button
+              onClick={() => scrollTo(s.id)}
+              whileHover={{ scale: 1.2 }}
+              whileTap={{ scale: 0.9 }}
+              className={`relative w-3 h-3 rounded-full transition-all duration-500 ${
+                isActive
+                  ? "bg-amber-accent shadow-[0_0_12px_rgba(245,166,35,0.4)]"
+                  : "bg-txt-dim hover:bg-txt-muted"
+              }`}
+              aria-label={`Scroll to ${s.label}`}
+            >
+              {isActive && (
+                <motion.div
+                  className="absolute inset-0 rounded-full bg-amber-accent"
+                  animate={{ scale: [1, 1.8, 1], opacity: [0.5, 0, 0.5] }}
+                  transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
+                />
+              )}
+            </motion.button>
 
-      {/* Nav vertical (dots + labels) */}
-      <div className="hidden md:flex fixed left-6 top-1/2 -translate-y-1/2 flex-col items-center space-y-6 z-50">
-        {/* Línea vertical */}
-        <div className="absolute w-px bg-gray-700 h-[23vh] rounded" />
-
-        {SECTIONS.map((s) => {
-          const isActive = active === s.id;
-          return (
-            <div key={s.id} className="relative group">
-              <motion.button
-                onClick={() => scrollTo(s.id)}
-                whileHover={{ scale: 1.15 }}
-                whileTap={{ scale: 0.95 }}
-                className={`relative z-20 w-4 h-4 rounded-full border-2 transition-all duration-300 flex items-center justify-center ${
-                  isActive
-                    ? "bg-green-500 border-green-400 shadow-[0_0_12px_rgba(16,185,129,0.15)]"
-                    : "bg-gray-700 border-gray-500 hover:bg-gray-600"
-                }`}
-                aria-label={`Scroll to ${s.label}`}
-              />
-
-              {/* Label: visible on hover OR if active */}
-              <button
-                className={`absolute left-6 top-1/2 -translate-y-1/2 whitespace-nowrap rounded-md px-3 py-1 text-sm text-gray-200 bg-black/60 border border-gray-700 transition-all duration-200
-             opacity-100 translate-x-0" : "opacity-0 group-hover:opacity-100 -translate-x-1"}
-                `}
-                style={{ transformOrigin: "left center" }}
-                onClick={() => scrollTo(s.id)}
-              >
-                {s.label}
-                
-              </button>
-            </div>
-          );
-        })}
-      </div>
-    </>
+            {/* Label tooltip */}
+            <button
+              onClick={() => scrollTo(s.id)}
+              className={`absolute left-7 top-1/2 -translate-y-1/2 whitespace-nowrap rounded-md px-3 py-1 font-code text-xs transition-all duration-300 ${
+                isActive
+                  ? "text-amber-accent bg-card border border-amber-accent/20 opacity-100 translate-x-0"
+                  : "text-txt-muted bg-card/80 border border-border opacity-0 group-hover:opacity-100 -translate-x-1 group-hover:translate-x-0"
+              }`}
+            >
+              {s.label}
+            </button>
+          </div>
+        );
+      })}
+    </nav>
   );
 };
 
