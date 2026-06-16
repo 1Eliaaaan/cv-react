@@ -24,6 +24,15 @@ const personalProjects: Project[] = [
     image: "https://api.microlink.io/?url=https://chat-app-five-gilt.vercel.app&screenshot=true&meta=false&embed=screenshot.url",
     role: "Full Stack Developer",
   },
+    {
+    title: "MyIGN",
+    description: "Gaming profile app with user authentication, game library, and social features.",
+    technologies: ["TypeScript", "React", "Next.js", "Vercel", "Supabase", "Auth", "SQL", "Cloudfare R2"],
+    githubLink: "",
+    liveLink: "https://myign.space",
+    image: "https://api.microlink.io/?url=https://myign.space&screenshot=true&meta=false&embed=screenshot.url",
+    role: "Full Stack Developer",
+  },
   {
     title: "Fitsum App",
     description: "AI-powered fitness app for creating personalized workout routines and recipes using OpenAI.",
