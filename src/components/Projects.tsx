@@ -78,6 +78,15 @@ const personalProjects: Project[] = [
     image: "https://api.microlink.io/?url=https://www.arcanaessence.store/&screenshot=true&meta=false&embed=screenshot.url",
     role: "Full Stack Developer",
   },
+    {
+    title: "The Jaded Group",
+    description: "Premium landing page",
+    technologies: ["GOHighLevel", "CRM"],
+    liveLink: "https://link.kiscrm.com/preview/LE3Ug2PgTOlzpC5SThoT",
+    githubLink: '',
+    image: "https://api.microlink.io/?url=https://link.kiscrm.com/preview/LE3Ug2PgTOlzpC5SThoT&screenshot=true&meta=false&embed=screenshot.url",
+    role: "Full Stack Developer",
+  },
 ]
 
 const laboralProjects: Project[] = [
